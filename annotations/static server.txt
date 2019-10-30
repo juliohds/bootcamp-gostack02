@@ -1,0 +1,6 @@
+insira esse middleware no app
+
+        this.server.use(
+            '/files',
+            express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
+        );

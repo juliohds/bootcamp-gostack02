@@ -1,0 +1,22 @@
+docker run --name mongobarber -p 27017:27017 -d -t mongo
+
+teste no navegador
+localhost:27017
+
+yarn add mongoose
+
+
+import mongoose from 'mongoose';
+
+isso no index database;
+
+    mongo() {
+        this.mongoConnection = mongoose.connect(
+            'mongodb://localhost:27017/gobarber',
+            { useNewUrlParser: true, userFindAndModify: true }
+        );
+    }
+
+
+configurando schema mongodb
+
