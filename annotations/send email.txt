@@ -1,0 +1,21 @@
+yarn add nodemailer
+
+
+mails js
+
+export default {
+    host: '',
+    port: '',
+    secure: false,
+    auth: {
+        user: '',
+        pass: '',
+    },
+    default: {
+        from: 'Julio Henrique <noreply@gobarber.com>',
+    },
+};
+
+
+
+configure mailtrap
