@@ -8,6 +8,7 @@ import FileController from './app/controllers/FileController';
 import StudentController from './app/controllers/StudentController';
 import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
+import NotificationController from './app/controllers/NotificationController';
 
 import authMiddlewares from './app/middlewares/auth';
 
@@ -28,8 +29,12 @@ routes.get('/students', StudentController.getAll);
 
 routes.get('/appointments', AppointmentController.getAll);
 routes.post('/appointments', AppointmentController.store);
+routes.delete('/appointments/:id', AppointmentController.delete);
 
 routes.get('/schedules', ScheduleController.index);
+routes.get('/notifications', NotificationController.index);
+routes.put('/notifications/:id', NotificationController.update);
+
 routes.post('/files', upload.single('file'), FileController.store);
 
 export default routes;

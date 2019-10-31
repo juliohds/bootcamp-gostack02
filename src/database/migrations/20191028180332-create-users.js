@@ -10,7 +10,10 @@ module.exports = {
             name: Sequelize.STRING,
             email: Sequelize.STRING,
             password_hash: Sequelize.STRING,
-            provider: Sequelize.BOOLEAN,
+            provider: {
+                type: Sequelize.BOOLEAN,
+                defaultValue: false,
+            },
             created_at: Sequelize.DATE,
             updated_at: Sequelize.DATE,
         });
